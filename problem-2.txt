@@ -1,0 +1,31 @@
+procedure dot_product(v1,v2 : array_of_integer[3], var ps:float)
+var
+    i,j:integer;
+begin
+   ps:=0;
+    FOR i FROM 0 TO v1.length -1 step 1 do
+        ps:=ps+v1[i]*v2[i];
+    end_for
+end
+
+
+/* */
+algorithm orthogonal_Procedure
+var
+    v1,v2 : ARRAY_OF INTEGER[3];
+    ps:=FLOAT;
+  
+
+begin
+  write("give vector 1");
+    Read(v1);
+    write("give vector 2");
+    Read(v2);
+   dot_product(v1,v2,ps)
+   write(ps);
+   if (ps=0) THEN
+       write(vectors are orthogonal)
+   else
+       write(vectors are not orthogonal)
+   end_if
+end
